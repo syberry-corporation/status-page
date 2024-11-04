@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/monitoring-status-page",
-  assetPrefix: "/monitoring-status-page/",
+  basePath: "/status-page",
+  assetPrefix: "/status-page/",
   compiler: {
     styledComponents: true,
   },

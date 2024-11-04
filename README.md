@@ -53,3 +53,8 @@ Currently, there are two available themes which will automatically be applied ba
 - `dark`
 
 Theming tokens are available for editing in the [themes](./src/app/themes.ts) file.
+
+## License
+- The original code in this repository is licensed under the [MIT License](./LICENSE).
+- All modifications made by Syberry Corporation are licensed under [Syberry Corporation License](./LICENSE-SYBERRY-CORPORATION).
+

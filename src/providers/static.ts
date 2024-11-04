@@ -29,7 +29,7 @@ export const staticProvider: Provider = {
             if (response.ok) {
                 currentStatuses = await response.json();
             } else {
-                throw new Error(`"Error HTTP: " + response.status + "\\n" + response.statusText`);
+                throw new Error(`Error HTTP: ` + response.status + "\\n" + response.statusText);
             }
 
             if (currentStatuses === undefined || currentStatuses.length == 0) {
