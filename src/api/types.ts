@@ -1,5 +1,4 @@
-type BaseComponentType = {
-  id: string;
+export type BaseComponentType = {
   name: string;
   status:
     | "operational"

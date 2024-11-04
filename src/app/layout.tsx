@@ -7,6 +7,11 @@ import styled from "styled-components";
 import { Roboto } from "next/font/google";
 import { themes } from "./themes";
 import { ThemeProvider } from "./ThemeProvider";
+import AmplifyConfigWrapper from "@/app/components/AmplifyConfigWrapper";
+import {Header} from "@/app/components/Header";
+import React from "react";
+import {Footer} from "@/app/components/Footer";
+import {Stack} from "@/app/components/Stack";
 
 const inter = Roboto({ weight: ["400", "500"], subsets: ["latin"] });
 
@@ -24,6 +29,7 @@ const Box = styled.div`
 
 const Body = styled.body`
   background-color: ${(props) => props.theme.colors.body};
+  color: white;
   margin: 0;
 `;
 
@@ -37,9 +43,15 @@ export default function RootLayout({
       <StyledComponentsRegistry>
         <ThemeProvider>
           <Body className={inter.className}>
-            <DataProvider>
-              <Box>{children}</Box>
-            </DataProvider>
+            <AmplifyConfigWrapper>
+                  <Box>
+                    <Stack $space="large">
+                      <Header />
+                      {children}
+                      <Footer />
+                    </Stack>
+                  </Box>
+            </AmplifyConfigWrapper>
           </Body>
         </ThemeProvider>
       </StyledComponentsRegistry>

@@ -32,7 +32,7 @@ export const Component = ({ name, status, children }: ComponentType) => {
       </Box>
       {showChildren
         ? children?.map((child) => (
-            <Box key={child.id}>
+            <Box key={child.name}>
               {child.name} <Badge status={child.status} />
             </Box>
           ))

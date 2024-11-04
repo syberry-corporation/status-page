@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest"
-
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^5.3.3",
     "@octokit/rest": "21.0.2",
+    "again": "^0.0.1",
+    "aws-amplify": "^5.3.25",
     "dayjs": "1.11.13",
     "next": "14.2.14",
     "react": "18",
@@ -27,9 +29,9 @@
     "@types/react-dom": "18",
     "@vitejs/plugin-react": "4.3.2",
     "eslint": "8",
-    "jsdom": "25.0.1",
-    "vitest": "2.1.2",
     "eslint-config-next": "14.2.14",
-    "typescript": "5"
+    "jsdom": "25.0.1",
+    "typescript": "5",
+    "vitest": "2.1.2"
   }
 }
