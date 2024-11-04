@@ -1,21 +1,22 @@
-// TODO remove
 "use client";
 
-import { Components } from "./components/components/Components";
-import { HistoricalIncidents } from "./components/incidents/HistoricalIncidents";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Stack } from "./components/Stack";
-import { Incidents } from "./components/incidents/Incidents";
+import {useEffect} from "react";
+import {useRouter} from "next/navigation";
+import {Auth} from "aws-amplify";
+
 
 export default function Home() {
-  return (
-    <Stack $space="large">
-      <Header />
-      <Incidents />
-      <Components />
-      <HistoricalIncidents />
-      <Footer />
-    </Stack>
-  );
+    const router = useRouter();
+
+    useEffect(() => {
+        Auth.currentAuthenticatedUser()
+            .then(user => {
+                router.push('/dashboard');
+            })
+            .catch(() => {
+                router.push('/login');
+            });
+    }, [router]);
+
+    return <div>Redirecting...</div>; // Можно добавить сообщение о редиректе
 }
