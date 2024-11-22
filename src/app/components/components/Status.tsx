@@ -26,6 +26,19 @@ const BackgroundYellow = styled.div`
   transition: 0.3s;
 `;
 
+const BackgroundLightGray = styled.div`
+  background-color: rgb(173, 173, 173); //#b1b1b1;
+  color: white;
+  padding: 16px;
+  border-radius: 3px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+`;
+
 const Title = styled.h2`
   font-size: 20px;
   margin: 0;
@@ -42,4 +55,10 @@ export const StatusPartialOutage = () => (
   <BackgroundYellow>
     <Title>Some Systems Have Outages</Title>
   </BackgroundYellow>
+);
+
+export const StatusLoading = () => (
+  <BackgroundLightGray>
+    <Title>Loading...</Title>
+  </BackgroundLightGray>
 );

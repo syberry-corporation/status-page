@@ -4,7 +4,7 @@
 import {useData} from "@/api/client";
 import {Component} from "./Component";
 import styled from "styled-components";
-import {StatusOperational, StatusPartialOutage} from "./Status";
+import {StatusOperational, StatusPartialOutage, StatusLoading} from "./Status";
 import {Skeleton} from "./Skeleton";
 import {Stack} from "../Stack";
 
@@ -21,7 +21,7 @@ export const Components = () => {
 
     return (
         <Card>
-            {loading ? (<StatusOperational/>) : (
+            {loading ? (<StatusLoading/>) : (
                 components?.every(component => {
                     return component.status === "operational"
                 }) ? (
